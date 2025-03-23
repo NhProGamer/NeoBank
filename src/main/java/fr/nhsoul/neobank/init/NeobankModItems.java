@@ -4,6 +4,7 @@
  */
 package fr.nhsoul.neobank.init;
 
+import fr.nhsoul.neobank.NeoBankMod;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -12,11 +13,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import fr.nhsoul.neobank.NeobankMod;
 import fr.nhsoul.neobank.item.Money;
 
 public class NeobankModItems {
-	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(NeobankMod.MODID);
+	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(NeoBankMod.MODID);
 	public static final DeferredItem<Item> ATM = block(NeobankModBlocks.ATM);
 	public static final DeferredItem<Item> BILL_1 = REGISTRY.register("bill_1", Money::new);
 	public static final DeferredItem<Item> BILL_5 = REGISTRY.register("bill_5", Money::new);

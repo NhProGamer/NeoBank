@@ -1,0 +1,5 @@
+{
+  "gui.neobank.atm_menu.confirm_button": "Valider",
+  "gui.neobank.atm_menu.label": "Combien voulez vous retirer ?",
+  "block.neobank.atm": "DAB - %d₦"
+}

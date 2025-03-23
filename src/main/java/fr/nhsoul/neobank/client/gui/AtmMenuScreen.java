@@ -1,7 +1,6 @@
 package fr.nhsoul.neobank.client.gui;
 
-import fr.nhsoul.neobank.Bank;
-import fr.nhsoul.neobank.NeobankMod;
+import fr.nhsoul.neobank.NeoBankMod;
 import fr.nhsoul.neobank.network.NeoBits;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -78,11 +77,11 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		int textWidth = this.font.width(Component.translatable("gui.neobank.atm_menu.label_conbien_voulez_vous_retirer"));
+		int textWidth = this.font.width(Component.translatable("gui.neobank.atm_menu.label"));
 		int xPosition = (this.imageWidth - textWidth) / 2;
 
 		guiGraphics.drawString(this.font,
-				Component.translatable("gui.neobank.atm_menu.label_conbien_voulez_vous_retirer"),
+				Component.translatable("gui.neobank.atm_menu.label"),
 				xPosition,
 				(this.imageHeight/2)-18-2,
 				-12829636,
@@ -90,7 +89,7 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 		);
 
 		guiGraphics.drawString(this.font,
-				Component.literal("ATM - " + NeobankMod.NeoBitsAmount + "₦ NeoBits"),
+				Component.translatable("block.neobank.atm", NeoBankMod.NeoBitsAmount),
 				6,
 				6,
 				-12829636,
@@ -106,7 +105,7 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 			public void insertText(String text) {
 				super.insertText(text);
 				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.neobank.atm_menu.amount").getString());
+					setSuggestion("0");
 				else
 					setSuggestion(null);
 			}
@@ -115,18 +114,18 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 			public void moveCursorTo(int pos, boolean flag) {
 				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.neobank.atm_menu.amount").getString());
+					setSuggestion("0");
 				else
 					setSuggestion(null);
 			}
 		};
-		amount.setMaxLength(10);
+		amount.setMaxLength(12);
 		amount.setFilter(this::filterInput);
-		amount.setSuggestion(Component.translatable("gui.neobank.atm_menu.amount").getString());
+		amount.setSuggestion("0");
 		guistate.put("text:amount", amount);
 		this.addWidget(this.amount);
 
-		button_valider = Button.builder(Component.translatable("gui.neobank.atm_menu.button_valider"), e -> {
+		button_valider = Button.builder(Component.translatable("gui.neobank.atm_menu.confirm_button"), e -> {
 			if (!amount.getValue().isEmpty()) {
 				PacketDistributor.sendToServer(new NeoBits(Integer.parseInt(amount.getValue())));
 				this.minecraft.player.closeContainer();
@@ -162,7 +161,7 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 
 			return false; // Caractère interdit
 		}
-		if (Integer.parseInt(input) > NeobankMod.NeoBitsAmount) return false;
+		if (Integer.parseInt(input) > NeoBankMod.NeoBitsAmount) return false;
 		return true;
 	}
 }
