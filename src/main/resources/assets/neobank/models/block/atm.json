@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/acacia_leaves",
+    "up": "minecraft:block/acacia_leaves",
+    "north": "minecraft:block/acacia_leaves",
+    "east": "minecraft:block/acacia_leaves",
+    "south": "minecraft:block/acacia_leaves",
+    "west": "minecraft:block/acacia_leaves",
+    "particle": "minecraft:block/acacia_leaves"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "gui.neobank.atm_menu.amount": "0",
+  "gui.neobank.atm_menu.button_annuler": "Annuler",
+  "gui.neobank.atm_menu.button_valider": "Valider",
+  "gui.neobank.atm_menu.label_conbien_voulez_vous_retirer": "Combien voulez vous retirer ?",
+  "block.neobank.atm": "Atm"
+}
