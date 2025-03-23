@@ -41,6 +41,8 @@ public class NeoBankMod {
 		NeobankModItems.REGISTRY.register(modEventBus);
 
 		NeobankModMenus.REGISTRY.register(modEventBus);
+
+		CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
 	}
 
 	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
