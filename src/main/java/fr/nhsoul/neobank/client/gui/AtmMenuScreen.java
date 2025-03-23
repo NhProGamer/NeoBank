@@ -128,8 +128,8 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 		button_valider = Button.builder(Component.translatable("gui.neobank.atm_menu.confirm_button"), e -> {
 			if (!amount.getValue().isEmpty()) {
 				PacketDistributor.sendToServer(new NeoBits(Integer.parseInt(amount.getValue())));
-				this.minecraft.player.closeContainer();
 			}
+			this.minecraft.player.closeContainer();
 		}).bounds(this.leftPos + 111, this.topPos + 142, 61, 20).build();
 		guistate.put("button:button_valider", button_valider);
 

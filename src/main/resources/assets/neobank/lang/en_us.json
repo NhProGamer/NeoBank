@@ -1,0 +1,5 @@
+{
+  "gui.neobank.atm_menu.confirm_button": "Confirm",
+  "gui.neobank.atm_menu.label": "Enter the desired amount",
+  "block.neobank.atm": "DAB - ₦%d"
+}
