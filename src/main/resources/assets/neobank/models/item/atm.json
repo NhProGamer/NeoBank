@@ -1,22 +1,31 @@
 {
   "parent": "neobank:block/atm",
   "display": {
-    "thirdperson": {
-      "rotation": [
-        10,
-        -45,
-        170
-      ],
-      "translation": [
-        0,
-        1.5,
-        -2.75
-      ],
-      "scale": [
-        0.375,
-        0.375,
-        0.375
-      ]
+    "thirdperson_righthand": {
+      "scale": [0.48438, 0.48438, 0.48438]
+    },
+    "thirdperson_lefthand": {
+      "scale": [0.48438, 0.48438, 0.48438]
+    },
+    "firstperson_righthand": {
+      "scale": [0.56445, 0.56445, 0.56445]
+    },
+    "firstperson_lefthand": {
+      "scale": [0.56445, 0.56445, 0.56445]
+    },
+    "ground": {
+      "translation": [0, 1, 0],
+      "scale": [0.3, 0.3, 0.3]
+    },
+    "gui": {
+      "rotation": [30, 225, 0],
+      "scale": [0.625, 0.625, 0.625]
+    },
+    "head": {
+      "scale": [0, 0, 0]
+    },
+    "fixed": {
+      "translation": [0, 0, -2]
     }
   }
 }

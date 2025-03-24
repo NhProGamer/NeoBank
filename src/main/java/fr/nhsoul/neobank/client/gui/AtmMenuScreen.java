@@ -89,7 +89,7 @@ public class AtmMenuScreen extends AbstractContainerScreen<AtmMenuMenu> {
 		);
 
 		guiGraphics.drawString(this.font,
-				Component.translatable("block.neobank.atm", NeoBankMod.NeoBitsAmount),
+				Component.translatable("block.neobank.atm_label", NeoBankMod.NeoBitsAmount),
 				6,
 				6,
 				-12829636,

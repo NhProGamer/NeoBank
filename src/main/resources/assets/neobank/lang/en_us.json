@@ -1,5 +1,14 @@
 {
   "gui.neobank.atm_menu.confirm_button": "Confirm",
   "gui.neobank.atm_menu.label": "Enter the desired amount",
-  "block.neobank.atm": "DAB - ₦%d"
+  "block.neobank.atm_label": "DAB - ₦%d",
+  "block.neobank.atm": "ATM",
+  "item.neobank.bill_1": "₦1",
+  "item.neobank.bill_5": "₦5",
+  "item.neobank.bill_10": "₦10",
+  "item.neobank.bill_20": "₦20",
+  "item.neobank.bill_50": "₦50",
+  "item.neobank.bill_100": "₦100",
+  "item.neobank.bill_200": "₦200",
+  "item.neobank.bill_500": "₦500"
 }

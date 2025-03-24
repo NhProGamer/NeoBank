@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package fr.nhsoul.neobank.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;

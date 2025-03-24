@@ -1,4 +1,3 @@
-
 package fr.nhsoul.neobank.block;
 
 import fr.nhsoul.neobank.Bank;
